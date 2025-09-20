@@ -5,6 +5,41 @@
     <title>BCS-011 Computer Basics and PC Software - Video Lectures</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+    .dropdown {
+        margin-bottom: 10px;
+    }
+    .dropdown-btn {
+        background: #f0f0f0;
+        border: none;
+        padding: 8px 16px;
+        font-size: 1em;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+    .dropdown-content {
+        display: none;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .dropdown-content.active {
+        display: block;
+    }
+    </style>
+    <script>
+    function toggleDropdown(id) {
+        var el = document.getElementById(id);
+        if (el.classList.contains('active')) {
+            el.classList.remove('active');
+        } else {
+            el.classList.add('active');
+        }
+    }
+    </script>
 </head>
 <body>
     <h1>BCS-011: Computer Basics and PC Software</h1>
@@ -38,90 +73,120 @@
             </li>
         </ul>
     </nav>
-    <section>
-    <h2 id="block1">Block 1: Basics of Computer Hardware</h2>
-    <h3 id="unit1">Unit-1: Computer their Origin and Applications</h3>
-        <ul>
-            <li><b>Video Lecture: History of Computers</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/ro9kFrlUwlM" title="History of Computers" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture: Introduction of Computer System and Operating System</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/G-Lz5atk2IY" title="Introduction of Computer System and Operating System" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Introduction to Computer System</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/qGhrli5oa_4" title="Introduction to Computer System" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit2">Unit-2: Functioning of a Computer</h3>
-        <ul>
-            <li><b>Video Lecture: Functioning of a Computer</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/fYbcYHB96bE" title="Functioning of a Computer" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Central Processing Unit (CPU)</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/M44zAE-SReQ" title="Central Processing Unit (CPU)" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Introduction to Memory and IO Devices</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/2OD2XQh56Yk" title="Introduction to Memory and IO Devices" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit3">Unit-3: Memory System</h3>
-        <ul>
-            <li><b>Video Lecture: Memory System - I</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/uOs1F1yIUms" title="Memory System - I" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture: Memory System - II</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/jS6f8ncRWps" title="Memory System - II" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Memory Organisation</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/lbt7xEk0r3A" title="Memory Organisation" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Main Memory of a PC</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/M1XLolB51Jo" title="Main Memory of a PC" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Secondary Memory and its Uses</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/RLvxpmAGNzI" title="Secondary Memory and its Uses" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit4">Unit-4: Input Output Devices</h3>
-        <ul>
-            <li><b>Video Lecture on Introduction to Input and Output Devices</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/wx2SjU5Tf3U" title="Introduction to Input and Output Devices" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Input Devices</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/1k-Csoq2aZ4" title="Input Devices" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Output Devices</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/05oITUGEvkQ" title="Output Devices" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit5">Unit-5: My Personal Computer</h3>
-        <ul>
-            <li><b>Video Lecture: My Personal Computer - I</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/l0xyECSgXn8" title="My Personal Computer - I" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture: My Personal Computer - II</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/0h8gKW3VcgQ" title="My Personal Computer - II" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    </section>
-    <section>
-    <h2 id="block2">Block 2: Basics of Computer Software</h2>
-    <h3 id="unit6">Unit-1: Software Evolution</h3>
-        <ul>
-            <li><b>Video Lecture: Software Evolution - I</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/S2X_7jneufk" title="Software Evolution - I" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Introduction to Software</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/JL9WRLGYoBE" title="Introduction to Software" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lectures on Software Vulnerability and Viruses</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/ayvaR3YP24g" title="Software Vulnerability and Viruses" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Antiviral S/W Worm and Trojan Horses</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/d-6LsPrDiOs" title="Antiviral S/W Worm and Trojan Horses" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit7">Unit-2: Operating System</h3>
-        <ul>
-            <li><b>Video Lecture Introduction to Operating System</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/EsN16PXcLUs" title="Introduction to Operating System" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit8">Unit-3: Concept in Programming Language</h3>
-        <ul>
-            <li><b>Video Lecture on Algorithms and Flowcharts</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/UD7O8WoxVgU" title="Algorithms and Flowcharts" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit9">Unit-4: Computer Applications</h3>
-        <ul>
-            <li><b>Video Lecture on Application Software</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/NN9hSDi76VU" title="Application Software" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Entity Relationship Diagram</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/cllP6_XwkRE" title="Entity Relationship Diagram" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Introduction to Database Management System</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/ax3QXU3QceY" title="Introduction to Database Management System" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    </section>
-    <section>
-    <h2 id="block3">Block 3: Internet Technologies</h2>
-    <h3 id="unit10">Unit-1: Networking and Internet</h3>
-        <ul>
-            <li><b>Video Lecture on Fundamentals of Data Communications-1 (Introduction, Data and Signal)</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/vMT524hXcwc" title="Fundamentals of Data Communications-1" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Fundamentals of Data Communications-2 (Physical Connection, Data Transmission Modes)</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/mEOUqillwzw" title="Fundamentals of Data Communications-2" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Fundamentals of Data Communications-3 (Modem, Speed of Data Transmission, Modes of Data Transmission)</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/aF_zi6iXWSo" title="Fundamentals of Data Communications-3" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Network Devices</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/OwvEMzY07cw" title="Network Devices" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Network Architecture and Topologies</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/lcUHLE5vyyA" title="Network Architecture and Topologies" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit11">Unit-2: Web Applications-I</h3>
-        <ul>
-            <li><b>Video Lecture on Introduction to Internet</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/jDN2dAWB3zY" title="Introduction to Internet" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Components of Internet</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/PH8gi5GUwt8" title="Components of Internet" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Internet Addressing</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/JnriMdzKZNc" title="Internet Addressing" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Web Browsers</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/k52Mvq9eDBk" title="Web Browsers" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Principles of Internet Search Engines</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/OkAG5C3rEB4" title="Principles of Internet Search Engines" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Search Patterns</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/AI0DA4HXN2Y" title="Search Patterns" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Using E-Mail</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/Y-foXm8vLgg" title="Using E-Mail" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Using Messenger</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/vo1rKytx4Y4" title="Using Messenger" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    <h3 id="unit12">Unit-3: Web Applications-II</h3>
-        <ul>
-            <li><b>Video Lecture on New Possibilities due to Internet</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/x7NY6ayTOjo" title="New Possibilities due to Internet" frameborder="0" allowfullscreen></iframe></li>
-            <li><b>Video Lecture on Some More Applications of Internet</b><br><iframe width="420" height="236" src="https://www.youtube.com/embed/jbjAZ-5o_vQ" title="Some More Applications of Internet" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-    </section>
+    <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('block1-content')">Block 1: Basics of Computer Hardware</button>
+        <div class="dropdown-content" id="block1-content">
+            <button class="dropdown-btn" onclick="toggleDropdown('unit1-content')">Unit-1: Computer their Origin and Applications</button>
+            <div class="dropdown-content" id="unit1-content">
+                <ul>
+                    <li><b>Video Lecture: History of Computers</b> <a href="https://youtu.be/ro9kFrlUwlM" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture: Introduction of Computer System and Operating System</b> <a href="https://youtu.be/G-Lz5atk2IY" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Introduction to Computer System</b> <a href="https://youtu.be/qGhrli5oa_4" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit2-content')">Unit-2: Functioning of a Computer</button>
+            <div class="dropdown-content" id="unit2-content">
+                <ul>
+                    <li><b>Video Lecture: Functioning of a Computer</b> <a href="https://youtu.be/fYbcYHB96bE" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Central Processing Unit (CPU)</b> <a href="https://youtu.be/M44zAE-SReQ" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Introduction to Memory and IO Devices</b> <a href="https://youtu.be/2OD2XQh56Yk" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit3-content')">Unit-3: Memory System</button>
+            <div class="dropdown-content" id="unit3-content">
+                <ul>
+                    <li><b>Video Lecture: Memory System - I</b> <a href="https://youtu.be/uOs1F1yIUms" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture: Memory System - II</b> <a href="https://youtu.be/jS6f8ncRWps" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Memory Organisation</b> <a href="https://youtu.be/lbt7xEk0r3A" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Main Memory of a PC</b> <a href="https://youtu.be/M1XLolB51Jo" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Secondary Memory and its Uses</b> <a href="https://youtu.be/RLvxpmAGNzI" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit4-content')">Unit-4: Input Output Devices</button>
+            <div class="dropdown-content" id="unit4-content">
+                <ul>
+                    <li><b>Video Lecture on Introduction to Input and Output Devices</b> <a href="https://youtu.be/wx2SjU5Tf3U" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Input Devices</b> <a href="https://youtu.be/1k-Csoq2aZ4" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Output Devices</b> <a href="https://youtu.be/05oITUGEvkQ" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit5-content')">Unit-5: My Personal Computer</button>
+            <div class="dropdown-content" id="unit5-content">
+                <ul>
+                    <li><b>Video Lecture: My Personal Computer - I</b> <a href="https://youtu.be/l0xyECSgXn8" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture: My Personal Computer - II</b> <a href="https://youtu.be/0h8gKW3VcgQ" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('block2-content')">Block 2: Basics of Computer Software</button>
+        <div class="dropdown-content" id="block2-content">
+            <button class="dropdown-btn" onclick="toggleDropdown('unit6-content')">Unit-1: Software Evolution</button>
+            <div class="dropdown-content" id="unit6-content">
+                <ul>
+                    <li><b>Video Lecture: Software Evolution - I</b> <a href="https://youtu.be/S2X_7jneufk" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Introduction to Software</b> <a href="https://youtu.be/JL9WRLGYoBE" target="_blank">Watch</a></li>
+                    <li><b>Video Lectures on Software Vulnerability and Viruses</b> <a href="https://youtu.be/ayvaR3YP24g" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Antiviral S/W Worm and Trojan Horses</b> <a href="https://youtu.be/d-6LsPrDiOs" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit7-content')">Unit-2: Operating System</button>
+            <div class="dropdown-content" id="unit7-content">
+                <ul>
+                    <li><b>Video Lecture Introduction to Operating System</b> <a href="https://youtu.be/EsN16PXcLUs" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit8-content')">Unit-3: Concept in Programming Language</button>
+            <div class="dropdown-content" id="unit8-content">
+                <ul>
+                    <li><b>Video Lecture on Algorithms and Flowcharts</b> <a href="https://youtu.be/UD7O8WoxVgU" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit9-content')">Unit-4: Computer Applications</button>
+            <div class="dropdown-content" id="unit9-content">
+                <ul>
+                    <li><b>Video Lecture on Application Software</b> <a href="https://youtu.be/NN9hSDi76VU" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Entity Relationship Diagram</b> <a href="https://youtu.be/cllP6_XwkRE" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Introduction to Database Management System</b> <a href="https://youtu.be/ax3QXU3QceY" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('block3-content')">Block 3: Internet Technologies</button>
+        <div class="dropdown-content" id="block3-content">
+            <button class="dropdown-btn" onclick="toggleDropdown('unit10-content')">Unit-1: Networking and Internet</button>
+            <div class="dropdown-content" id="unit10-content">
+                <ul>
+                    <li><b>Video Lecture on Fundamentals of Data Communications-1 (Introduction, Data and Signal)</b> <a href="https://youtu.be/vMT524hXcwc" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Fundamentals of Data Communications-2 (Physical Connection, Data Transmission Modes)</b> <a href="https://youtu.be/mEOUqillwzw" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Fundamentals of Data Communications-3 (Modem, Speed of Data Transmission, Modes of Data Transmission)</b> <a href="https://youtu.be/aF_zi6iXWSo" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Network Devices</b> <a href="https://youtu.be/OwvEMzY07cw" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Network Architecture and Topologies</b> <a href="https://youtu.be/lcUHLE5vyyA" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit11-content')">Unit-2: Web Applications-I</button>
+            <div class="dropdown-content" id="unit11-content">
+                <ul>
+                    <li><b>Video Lecture on Introduction to Internet</b> <a href="https://youtu.be/jDN2dAWB3zY" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Components of Internet</b> <a href="https://youtu.be/PH8gi5GUwt8" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Internet Addressing</b> <a href="https://youtu.be/JnriMdzKZNc" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Web Browsers</b> <a href="https://youtu.be/k52Mvq9eDBk" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Principles of Internet Search Engines</b> <a href="https://youtu.be/OkAG5C3rEB4" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Search Patterns</b> <a href="https://youtu.be/AI0DA4HXN2Y" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Using E-Mail</b> <a href="https://youtu.be/Y-foXm8vLgg" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Using Messenger</b> <a href="https://youtu.be/vo1rKytx4Y4" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown('unit12-content')">Unit-3: Web Applications-II</button>
+            <div class="dropdown-content" id="unit12-content">
+                <ul>
+                    <li><b>Video Lecture on New Possibilities due to Internet</b> <a href="https://youtu.be/x7NY6ayTOjo" target="_blank">Watch</a></li>
+                    <li><b>Video Lecture on Some More Applications of Internet</b> <a href="https://youtu.be/jbjAZ-5o_vQ" target="_blank">Watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
