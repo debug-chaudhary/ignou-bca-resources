@@ -19,6 +19,8 @@ function addSearchFeature() {
             <input type="text" id="searchInput" placeholder="Search courses, subjects, or topics...">
             <button onclick="performSearch()"><i class="fas fa-search"></i></button>
         </div>
+
+        
     `;
     
     // Add search to navigation
