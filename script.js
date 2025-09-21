@@ -1,86 +1,139 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+// Theme toggle functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    themeToggle.addEventListener('click', () => {
+        const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' 
+            ? 'light' 
+            : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.querySelector('#themeToggle i');
+    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+document.addEventListener('DOMContentLoaded', initThemeToggle);
+
+// Simple page view tracking
+function trackPageView() {
+    const data = {
+        page: window.location.pathname,
+        timestamp: new Date().toISOString(),
+        referrer: document.referrer
+    };
+    // Store locally for privacy
+    const views = JSON.parse(localStorage.getItem('pageViews') || '[]');
+    views.push(data);
+    localStorage.setItem('pageViews', JSON.stringify(views.slice(-100)));
+}
+
+// Track popular content
+function trackContentEngagement(contentType, contentId) {
+    const engagement = JSON.parse(localStorage.getItem('contentEngagement') || '{}');
+    const key = `${contentType}-${contentId}`;
+    engagement[key] = (engagement[key] || 0) + 1;
+    localStorage.setItem('contentEngagement', JSON.stringify(engagement));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    trackPageView();
+    // Track video plays
+    document.querySelectorAll('iframe[src*="youtube"]').forEach(iframe => {
+        iframe.addEventListener('load', () => {
+            trackContentEngagement('video', iframe.src);
+        });
     });
 });
 
-// Search functionality
-function addSearchFeature() {
-    const searchHTML = `
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search courses, subjects, or topics...">
-            <button onclick="performSearch()"><i class="fas fa-search"></i></button>
-        </div>
-
-        
-    `;
-    
-    // Add search to navigation
-    const navbar = document.querySelector('.navbar .container');
-    navbar.insertAdjacentHTML('beforeend', searchHTML);
-}
-
-function performSearch() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const searchableElements = document.querySelectorAll('h3, h4, p, li a');
-    
-    searchableElements.forEach(element => {
-        const text = element.textContent.toLowerCase();
-        const parent = element.closest('.semester-card, .download-card, .video-card');
-        
-        if (text.includes(searchTerm) && searchTerm !== '') {
-            if (parent) parent.style.backgroundColor = '#fff3cd';
-            element.style.backgroundColor = '#fff3cd';
-        } else {
-            if (parent) parent.style.backgroundColor = '';
-            element.style.backgroundColor = '';
-        }
+// Lazy loading for images and videos
+function initLazyLoading() {
+    const lazyElements = document.querySelectorAll('[data-src]');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                element.src = element.dataset.src;
+                element.removeAttribute('data-src');
+                observer.unobserve(element);
+            }
+        });
     });
+    lazyElements.forEach(element => observer.observe(element));
 }
 
-// Initialize search when page loads
+document.addEventListener('DOMContentLoaded', initLazyLoading);
+// Stylish Search Bar Logic
 document.addEventListener('DOMContentLoaded', function() {
-    addSearchFeature();
-    
-    // Add loading animation
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease-in';
-        document.body.style.opacity = '1';
-    }, 100);
-});
+    const searchInput = document.getElementById('mainSearch');
+    const searchBtn = document.getElementById('mainSearchBtn');
+    const resultsBox = document.getElementById('mainSearchResults');
+    const searchData = [
+        // Semesters
+        { title: "Semester 1", url: "semester1/index.html" },
+        { title: "Semester 2", url: "semester2/index.html" },
+        { title: "Semester 3", url: "semester3/index.html" },
+        { title: "Semester 4", url: "semester4/index.html" },
+        { title: "Semester 5", url: "semester5/index.html" },
+        { title: "Semester 6", url: "semester6/index.html" },
+        // Subjects
+        { title: "BCS-011 Computer Fundamentals", url: "semester1/bcs11.html" },
+        { title: "BCS-012 Basic Mathematics", url: "semester1/bcs12.html" },
+        { title: "MCS-11 Problem Solving and Programming", url: "semester2/mcs11.html" },
+        { title: "MCS-12 Computer Org and Assembly Language Programming", url: "semester2/mcs12.html" },
+        { title: "MCS-13 Discrete Mathematics", url: "semester2/mcs13.html" },
+        // Ebooks
+        { title: "Ebooks Collection", url: "downloads/ebooks/" },
+        { title: "Computer Fundamentals eBook", url: "downloads/ebooks/computer-fundamentals.pdf" },
+        { title: "Mathematics eBook", url: "downloads/ebooks/mathematics.pdf" },
+        // Syllabus
+        { title: "Complete Syllabus", url: "downloads/syllabus/" },
+        { title: "Semester 1 Syllabus", url: "downloads/syllabus/semester1.pdf" },
+        // Previous Papers
+        { title: "Previous Year Papers", url: "downloads/previous-papers/" },
+        // Video Lectures
+        { title: "Video Lectures", url: "resources/youtube-lectures.html" },
+        { title: "C Programming Tutorial", url: "resources/videos.html#c-programming" }
+    ];
 
-// Progress tracking (optional)
-function trackProgress() {
-    const completedTopics = JSON.parse(localStorage.getItem('completedTopics') || '[]');
-    
-    // Mark topic as completed
-    function markCompleted(topicId) {
-        if (!completedTopics.includes(topicId)) {
-            completedTopics.push(topicId);
-            localStorage.setItem('completedTopics', JSON.stringify(completedTopics));
-            updateProgressDisplay();
+    function showResults(results) {
+        if (results.length === 0) {
+            resultsBox.innerHTML = '<div class="search-bar-result-item">No results found</div>';
+        } else {
+            resultsBox.innerHTML = results.map(item => `<div class="search-bar-result-item" data-url="${item.url}">${item.title}</div>`).join('');
         }
+        resultsBox.style.display = 'block';
     }
-    
-    // Update progress display
-    function updateProgressDisplay() {
-        const totalTopics = document.querySelectorAll('[data-topic]').length;
-        const completedCount = completedTopics.length;
-        const progressPercent = (completedCount / totalTopics) * 100;
-        
-        // Update progress bar if exists
-        const progressBar = document.querySelector('.progress-bar');
-        if (progressBar) {
-            progressBar.style.width = progressPercent + '%';
+
+    function doSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query.length === 0) {
+            resultsBox.style.display = 'none';
+            return;
         }
+        // Show all results if query is empty, else filter
+        const filtered = searchData.filter(item => item.title.toLowerCase().includes(query));
+        showResults(filtered);
     }
-}
+
+    searchInput.addEventListener('input', doSearch);
+    searchBtn.addEventListener('click', doSearch);
+
+    resultsBox.addEventListener('click', function(e) {
+        if (e.target.classList.contains('search-bar-result-item') && e.target.dataset.url) {
+            window.location.href = e.target.dataset.url;
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !resultsBox.contains(e.target) && !searchBtn.contains(e.target)) {
+            resultsBox.style.display = 'none';
+        }
+    });
+});

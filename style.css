@@ -1,3 +1,204 @@
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --primary-color: #667eea;
+}
+
+body {
+    background-color: var(--bg-color, #f8f9fa);
+    color: var(--text-color, #333);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.semester-card,
+.download-card,
+.video-card {
+    background: var(--card-bg, white);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.12);
+}
+/* Stylish Search Bar Styles */
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    max-width: 600px;
+    margin: 1.5rem auto 2rem auto;
+    position: relative;
+}
+.search-bar-input {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #3498db;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-bar-input:focus {
+    border-color: #764ba2;
+}
+.search-bar-btn {
+    background: linear-gradient(135deg, #3498db 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.12);
+    transition: background 0.2s;
+}
+.search-bar-btn:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #3498db 100%);
+}
+.search-bar-results {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+.search-bar-result-item {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-bar-result-item:last-child {
+    border-bottom: none;
+}
+.search-bar-result-item:hover {
+    background: #f4f8fb;
+}
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #2c3e50;
+        transition: left 0.3s ease;
+        padding-top: 4rem;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+    .btn, .btn-download {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        min-height: 48px;
+        min-width: 120px;
+    }
+    .video-wrapper {
+        padding-bottom: 75%;
+    }
+    .semester-grid,
+    .download-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Improved mobile forms */
+input[type="text"], 
+input[type="date"], 
+select {
+    min-height: 48px;
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+/* Progress Tracker Styles */
+.progress-tracker {
+    background: #f4f8fb;
+    border: 1px solid #d1e3f0;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+.progress-bar-container {
+    background: #e0e0e0;
+    border-radius: 20px;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.progress-bar {
+    background: #3498db;
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+.topic-checklist label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
 /* Global Styles */
 * {
     margin: 0;
