@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCS-011: Computer Basics and PC Software</title>
+    <title>BCS-011: Computer Basics and PC Software (Complete)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
-        }
-        h1, h2, h3, h4 {
+            background-color: #fdfdfd;
             color: #333;
         }
+        h1, h2, h3, h4, h5 {
+            color: #2c3e50;
+        }
         h1 {
-            border-bottom: 2px solid #333;
+            border-bottom: 3px solid #2c3e50;
             padding-bottom: 10px;
+            text-align: center;
         }
         h2 {
-            background-color: #f2f2f2;
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 5px;
+        }
+        h3 {
+            background-color: #eaf2f8;
             padding: 10px;
-            border-left: 5px solid #333;
+            border-left: 6px solid #3498db;
+            margin-top: 30px;
+        }
+        h4 {
+            color: #3498db;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
         }
         .toc {
             border: 1px solid #ccc;
             padding: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             background-color: #fafafa;
+            border-radius: 5px;
         }
         .toc ul {
             list-style-type: none;
@@ -40,21 +56,19 @@
             text-decoration: underline;
         }
         .content-block {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .unit {
-            margin-left: 20px;
-            border-left: 3px solid #ccc;
-            padding-left: 15px;
+            margin-top: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
+            margin: 20px 0;
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
         th {
@@ -62,15 +76,34 @@
         }
         code {
             background-color: #eee;
-            padding: 2px 4px;
+            padding: 2px 5px;
             border-radius: 3px;
-            font-family: monospace;
+            font-family: "Courier New", Courier, monospace;
         }
         .check-progress {
-            background-color: #e7f3fe;
-            border: 1px solid #a6d5ff;
+            background-color: #e8f6f3;
+            border: 1px solid #a3e4d7;
             padding: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+        .check-progress h4 {
+            color: #16a085;
+            margin-top: 0;
+        }
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #ccc;
+            padding-left: 15px;
+            color: #555;
+        }
+        .image-placeholder {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            color: #777;
         }
     </style>
 </head>
@@ -114,108 +147,109 @@
         <div id="unit1-1" class="unit">
             <h3>Unit 1: Computer their Origin and Applications</h3>
             <h4>1.0 INTRODUCTION</h4>
-            [span_0](start_span)<p>Perhaps Computer is the most powerful and versatile tool created by human beings.[span_0](end_span) [span_1](start_span)In today's scenario, computer plays a major role in almost every aspect of life and influences our lives in one way or the other.[span_1](end_span) [span_2](start_span)A computer accepts the input through various input devices.[span_2](end_span) [span_3](start_span)After receiving the input data, computer performs different operations required by the user on these input.[span_3](end_span) [span_4](start_span)Finally, computer generates the resultant of the processed data as the output through various output devices.[span_4](end_span) [span_5](start_span)Hence, a computer is a data processing device.[span_5](end_span) [span_6](start_span)This unit will provide details about computers, its origins and also descriptions about computer's different components, their applications and some current hardware platforms of computer.[span_6](end_span)</p>
+            [span_0](start_span)<p>Perhaps Computer is the most powerful and versatile tool created by human beings[span_0](end_span). [span_1](start_span)In today's scenario, computer plays a major role in almost every aspect of life and influences our lives in one way or the other[span_1](end_span). [span_2](start_span)A computer accepts the input through various input devices, performs different operations on the input, and finally generates the resultant output through various output devices[span_2](end_span). [span_3](start_span)Hence, a computer is a data processing device[span_3](end_span).</p>
             
             <h4>1.2 ORIGIN OF COMPUTERS</h4>
-            [span_7](start_span)<p>Origin of computer could be rigorous efforts of men to count large numbers.[span_7](end_span) [span_8](start_span)This process of counting of large numbers generated various systems of numeration like Babylonian system of numeration, Greek system of numeration, Roman system of numeration and Indian system of numeration.[span_8](end_span) [span_9](start_span)Out of these the Indian system of numeration has been accepted universally.[span_9](end_span) [span_10](start_span)It is the basis of modern decimal system of numeration 0-9.[span_10](end_span)</p>
+            [span_4](start_span)<p>The origin of the computer is tied to the human effort to count large numbers[span_4](end_span). [span_5](start_span)This led to various systems of numeration, with the Indian system (0-9) being universally accepted and forming the basis of the modern decimal system[span_5](end_span).</p>
             
             <h5>1.2.1 Abacus</h5>
-            [span_11](start_span)<p>Nearly 5,000 years ago, the "abacus" was developed in China in 3000 B.C.[span_11](end_span) [span_12](start_span)The word abacus means calculating board.[span_12](end_span) [span_13](start_span)The "abacus" may be considered the first computer and it has been used since ancient times by a number of civilizations for basic arithmetical calculations.[span_13](end_span) [span_14](start_span)The arithmetic calculations are performed by manipulating the beads by using the principle of positional weight of beads on a rack.[span_14](end_span) [span_15](start_span)A skilled abacus operation can be as fast as a hand held calculator.[span_15](end_span)</p>
+            [span_6](start_span)<p>Developed in China around 3000 B.C., the abacus may be considered the first computer[span_6](end_span). [span_7](start_span)[span_8](start_span)[span_9](start_span)It's a calculating board or counting frame used for arithmetic operations by manipulating beads on wires[span_7](end_span)[span_8](end_span)[span_9](end_span).</p>
 
             <h5>1.2.2 Napier's Bones</h5>
-            [span_16](start_span)<p>John Napier was a mathematician who became famous for his invention of logarithms.[span_16](end_span) [span_17](start_span)The used of "logs" enabled him to reduce any multiplication problem.[span_17](end_span) [span_18](start_span)John Napier built a mechanical device for the purpose of multiplication in 1617 A.D. The device was known as Napier's bones.[span_18](end_span)</p>
+            [span_10](start_span)<p>In 1617 A.D., mathematician John Napier built a mechanical device for multiplication known as Napier's bones[span_10](end_span). [span_11](start_span)It consisted of a set of eleven rods made of bone or ivory that could be used to find products and quotients of large numbers[span_11](end_span).</p>
 
             <h5>1.2.3 Slide Rule</h5>
-            [span_19](start_span)<p>English mathematician E. Gunter developed the slide rule.[span_19](end_span) [span_20](start_span)This machine could perform operations like addition, subtraction, multiplication, and division.[span_20](end_span)</p>
+            [span_12](start_span)<p>Developed by English mathematician E. Gunter, the slide rule could perform addition, subtraction, multiplication, and division[span_12](end_span). [span_13](start_span)It works by sliding two rulers marked with logarithmic scales against each other[span_13](end_span).</p>
 
             <h5>1.2.4 Pascal's Calculator</h5>
-            [span_21](start_span)<p>Blaise Pascal was a French mathematician and one of the first modern scientists to developed and build calculator.[span_21](end_span) [span_22](start_span)He developed a machine at the age of 19 that was capable of adding and subtracting numbers.[span_22](end_span)</p>
+            [span_14](start_span)<p>At the age of 19, French mathematician Blaise Pascal developed a machine capable of adding and subtracting numbers[span_14](end_span). [span_15](start_span)It was operated by dialing a series of wheels, gears, and cylinders[span_15](end_span).</p>
             
             <h5>1.2.6 Difference Engine</h5>
-            [span_23](start_span)<p>The first step towards the creation of computers was made by an English mathematics professor, Charles Babbage.[span_23](end_span) [span_24](start_span)He realized that all mathematical calculations can be broken up into simple operations which are then constantly repeated, and that these operations could be carried out by an automatic machine.[span_24](end_span) [span_25](start_span)Charles Babbage is called the father of the computer.[span_25](end_span)</p>
+            [span_16](start_span)<p>English mathematics professor Charles Babbage started working on a 'Difference Engine' in the 1820s[span_16](end_span). [span_17](start_span)He realized that mathematical calculations could be broken into simple, repeated operations performed by an automatic machine[span_17](end_span). [span_18](start_span)He is often called the father of the computer[span_18](end_span).</p>
 
             <h5>1.2.7 The Analytical Engine</h5>
-            [span_26](start_span)<p>The Analytical Engine marks the progression from the arithmetic calculation to general-purpose computation.[span_26](end_span) [span_27](start_span)It was also developed by Charles Babbage.[span_27](end_span) [span_28](start_span)The Engine had a 'Store' (memory) where numbers and intermediate results could be held, and a separate 'Mill' (processor) where the arithmetic processing was performed.[span_28](end_span)</p>
+            [span_19](start_span)<p>Developed by Charles Babbage, the Analytical Engine marked a progression to general-purpose computation[span_19](end_span). [span_20](start_span)It had essential features of a modern computer, including a 'Store' (memory) and a 'Mill' (processor)[span_20](end_span). [span_21](start_span)It was capable of conditional branching, looping, and parallel processing[span_21](end_span).</p>
             
             <h4>1.3 COMPUTER GENERATIONS</h4>
-            [span_29](start_span)<p>The period, during which the evolution of computer took place, can be divided into five distinct phases known as Generations of Computers.[span_29](end_span)</p>
+            [span_22](start_span)[span_23](start_span)<p>The evolution of computers is divided into five distinct phases known as Generations of Computers, each distinguished by the type of switching circuits used[span_22](end_span)[span_23](end_span).</p>
             <ul>
-                [span_30](start_span)<li><b>First Generation Computers (1940-1956):</b> Characterized by the use of vacuum tubes.[span_30](end_span) [span_31](start_span)They were bulky, required large rooms for installation, and emitted a lot of heat.[span_31](end_span) [span_32](start_span)Examples include ENIAC, EDVAC, and UNIVAC-1.[span_32](end_span)</li>
-                [span_33](start_span)[span_34](start_span)<li><b>Second Generation Computers (1956-1963):</b> Used transistors instead of vacuum tubes.[span_33](end_span)[span_34](end_span) [span_35](start_span)This made computers smaller, faster, more powerful, and less expensive.[span_35](end_span) [span_36](start_span)High-level programming languages like FORTRAN, ALGOL, and COBOL were introduced.[span_36](end_span)</li>
-                [span_37](start_span)<li><b>Third Generation Computers (1964-1971):</b> Characterized by the use of Integrated Circuits (ICs) or "chips".[span_37](end_span) [span_38](start_span)This led to smaller size, lower cost, larger memory, and higher processing speed.[span_38](end_span)</li>
-                [span_39](start_span)<li><b>Fourth Generation Computers (1971-Present):</b> Used microprocessors, which contain all the circuits for arithmetic, logic, and control functions on a single chip.[span_39](end_span) [span_40](start_span)[span_41](start_span)This led to the development of microcomputers and personal computers.[span_40](end_span)[span_41](end_span)</li>
-                [span_42](start_span)<li><b>Fifth Generation Computers (Present and Beyond):</b> Based on Artificial Intelligence (AI), with applications like voice recognition.[span_42](end_span) [span_43](start_span)[span_44](start_span)These computers focus on parallel processing and aim to communicate in natural language.[span_43](end_span)[span_44](end_span)</li>
+                [span_24](start_span)<li><strong>First Generation (1940-1956):</strong> Characterized by the use of vacuum tubes[span_24](end_span). [span_25](start_span)These computers were bulky, required large rooms, and emitted significant heat[span_25](end_span). [span_26](start_span)The ENIAC was the first general-purpose programmable electronic computer[span_26](end_span).</li>
+                [span_27](start_span)<li><strong>Second Generation (1956-1963):</strong> Based on transistors and magnetic core storage[span_27](end_span). [span_28](start_span)[span_29](start_span)Transistors replaced vacuum tubes, making computers smaller, more powerful, and faster[span_28](end_span)[span_29](end_span). [span_30](start_span)High-level languages like FORTRAN and COBOL were introduced[span_30](end_span).</li>
+                [span_31](start_span)<li><strong>Third Generation (1964-1971):</strong> Used Integrated Circuits (ICs), or chips, which placed miniaturized transistors on silicon[span_31](end_span). [span_32](start_span)This drastically increased speed and efficiency[span_32](end_span). [span_33](start_span)The development of minicomputers took place during this era[span_33](end_span).</li>
+                [span_34](start_span)[span_35](start_span)<li><strong>Fourth Generation (1971-Present):</strong> Started with Large Scale Integration (LSI) and Very Large Scale Integration (VLSI) circuits, leading to the microprocessor[span_34](end_span)[span_35](end_span). [span_36](start_span)This allowed for the creation of the personal computer (PC)[span_36](end_span).</li>
+                [span_37](start_span)[span_38](start_span)<li><strong>Fifth Generation (Present and Beyond):</strong> Based on Artificial Intelligence (AI) and parallel processing[span_37](end_span)[span_38](end_span). [span_39](start_span)[span_40](start_span)These computers are still in development, with applications like voice recognition and neural networks[span_39](end_span)[span_40](end_span).</li>
             </ul>
 
-            <h4>1.4 COMPUTER SYSTEM</h4>
-            [span_45](start_span)<p>A computer system consists of devices that operate as an integrated unit.[span_45](end_span) The basic operations are:</p>
-            <ul>
-                [span_46](start_span)[span_47](start_span)<li><b>Input:</b> Entering data and programs into the computer system through devices like keyboards.[span_46](end_span)[span_47](end_span)</li>
-                [span_48](start_span)<li><b>Storage:</b> Saving data and instructions permanently or temporarily.[span_48](end_span) [span_49](start_span)The storage unit holds data before and after processing.[span_49](end_span)</li>
-                [span_50](start_span)<li><b>Processing:</b> Performing arithmetic and logical operations.[span_50](end_span) [span_51](start_span)This is done by the Central Processing Unit (CPU).[span_51](end_span)</li>
-                [span_52](start_span)<li><b>Output:</b> Producing results from the data for useful information, displayed on devices like monitors or printers.[span_52](end_span)</li>
-            </ul>
-
-            <h5>1.4.4 Von-Neumann Architecture</h5>
-            [span_53](start_span)<p>Mathematician John Von Neumann conceived a computer architecture which forms the core of nearly every computer system in use today.[span_53](end_span) [span_54](start_span)This model implements the stored program concept in which the data and the instructions both are stored in the memory.[span_54](end_span) [span_55](start_span)All computers share the same basic architecture which have memory, an I/O system, arithmetic logic unit (ALU) and control unit (CU).[span_55](end_span)</p>
-            
-            <h4>1.7 CURRENT APPLICATIONS OF COMPUTER</h4>
-            [span_56](start_span)[span_57](start_span)[span_58](start_span)[span_59](start_span)[span_60](start_span)[span_61](start_span)<p>Computers are used in various fields including Banking, Traffic Light Control, Sports, Schools and Colleges, Entertainment, Agriculture, and Health Care Management.[span_56](end_span)[span_57](end_span)[span_58](end_span)[span_59](end_span)[span_60](end_span)[span_61](end_span)</p>
+            <div class="check-progress">
+                <h4>Check Your Progress 1</h4>
+                <p><strong>1) What is a computer? Why is it known as data processor ?</strong><br/>
+                [span_41](start_span)A computer is an electronic device, which is used to accept, store, retrieve and process the data at faster speed and with greater accuracy[span_41](end_span). [span_42](start_span)It is also called as data processor because it is mainly used for processing the input data given to it and producing the desired result[span_42](end_span).</p>
+                <p><strong>2) Into how many generations the evolution of computer is divided?</strong><br/>
+                [span_43](start_span)Evolution of computer can be divided into five generations: First Generation (Vacuum tubes), Second Generation (Transistors), Third Generation (ICs), Fourth Generation (Microprocessor), Fifth Generation (Artificial intelligence)[span_43](end_span).</p>
+            </div>
         </div>
 
         <div id="unit1-2" class="unit">
             <h3>Unit 2: Functioning of a Computer</h3>
             <h4>2.2 COMPONENTS OF A DIGITAL COMPUTER & THEIR ROLE</h4>
-            [span_62](start_span)<p>A digital computer is an electronic device that receives data, performs arithmetic and logical operations and produces results according to a predetermined program.[span_62](end_span) The key elements include:</p>
+            [span_44](start_span)<p>A digital computer is an electronic device that receives data, performs operations, and produces results according to a program[span_44](end_span). [span_45](start_span)The key components are the Central Processing Unit (CPU), Input, Output, and Memory[span_45](end_span).</p>
             <ul>
-                [span_63](start_span)<li><b>Central Processing Unit (CPU):</b> The brain of the computer, responsible for executing instructions.[span_63](end_span) [span_64](start_span)It comprises a Control Unit (CU) and an Arithmetic & Logic Unit (ALU).[span_64](end_span)</li>
-                [span_65](start_span)<li><b>Input Devices:</b> Used to read instructions and data (e.g., keyboard, mouse).[span_65](end_span)</li>
-                [span_66](start_span)<li><b>Output Devices:</b> Display the results (e.g., monitor, printer).[span_66](end_span)</li>
-                <li><b>Memory:</b> Used as a working storage for data and instructions. [span_67](start_span)[span_68](start_span)It includes primary memory (RAM) and secondary memory (Hard Disk).[span_67](end_span)[span_68](end_span)</li>
+                [span_46](start_span)<li><strong>CPU:</strong> The brain of the computer, comprising the Control Unit (CU), Arithmetic & Logic Unit (ALU), and registers[span_46](end_span). [span_47](start_span)The CU controls instruction execution, while the ALU performs arithmetic and logic operations[span_47](end_span).</li>
+                [span_48](start_span)<li><strong>Input/Output Devices:</strong> Devices like keyboards and mice are used for input, while monitors and printers are used for output[span_48](end_span).</li>
+                [span_49](start_span)[span_50](start_span)<li><strong>Memory:</strong> Includes primary memory (RAM) for temporary storage and secondary memory (Hard Disk) for permanent storage[span_49](end_span)[span_50](end_span).</li>
             </ul>
 
             <h4>2.3 NUMBER SYSTEM</h4>
-            [span_69](start_span)<p>The decimal number system uses ten symbols (0-9) and has a base of 10.[span_69](end_span) [span_70](start_span)Other number systems used in computer science include binary (base 2), octal (base 8), and hexadecimal (base 16).[span_70](end_span)</p>
-            <h5>2.3.1 Binary Number System</h5>
-            [span_71](start_span)<p>The binary number system has base 2 and uses only two symbols, 0 and 1.[span_71](end_span) [span_72](start_span)A binary number like 1001 represents the decimal number 9 ($1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$).[span_72](end_span)</p>
+            [span_51](start_span)[span_52](start_span)<p>The binary number system, with a base of 2, uses only two symbols (0 and 1) and is the fundamental language of digital computers[span_51](end_span)[span_52](end_span). [span_53](start_span)[span_54](start_span)A number system with base 'r' will have 'r' distinct symbols from 0 to r-1[span_53](end_span)[span_54](end_span). [span_55](start_span)Other number systems like octal (base 8) and hexadecimal (base 16) are also used in computer science[span_55](end_span).</p>
             
             <h5>2.3.3 ASCII & Unicode</h5>
-            [span_73](start_span)<p><b>ASCII (American Standard Code for Information Interchange)</b> is an alphanumeric code used for representing numbers, alphabets, and symbols.[span_73](end_span) [span_74](start_span)It's a seven-bit code, often extended to eight bits for parity.[span_74](end_span)</p>
-            [span_75](start_span)<p><b>Unicode</b> is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems.[span_75](end_span) [span_76](start_span)The most common encoding on the web is UTF-8.[span_76](end_span)</p>
+            [span_56](start_span)<p><strong>ASCII (American Standard Code for Information Interchange)</strong> is a 7-bit code used to represent text, numbers, and symbols in computers[span_56](end_span). [span_57](start_span)It includes definitions for 128 characters[span_57](end_span).</p>
+            [span_58](start_span)<p><strong>Unicode</strong> is a computing industry standard for encoding and handling text from most of the world's writing systems[span_58](end_span). [span_59](start_span)[span_60](start_span)It has a repertoire of over 107,000 characters and is essential for multilingual environments[span_59](end_span)[span_60](end_span). [span_61](start_span)UTF-8 is the most commonly used encoding on the World Wide Web[span_61](end_span).</p>
             
             <h4>2.4 CONCEPT OF INSTRUCTION</h4>
-            [span_77](start_span)<p>An instruction refers to an operation that can be performed by the processor directly.[span_77](end_span) [span_78](start_span)The entire set of instructions a processor can execute forms its instruction set.[span_78](end_span) [span_79](start_span)Every instruction has two parts: an <b>opcode</b> (specifies the operation) and <b>operands</b> (the data for the operation).[span_79](end_span)</p>
+            [span_62](start_span)<p>An instruction tells the processor what task to perform[span_62](end_span). [span_63](start_span)The set of all instructions a processor can execute is its instruction set[span_63](end_span). [span_64](start_span)An instruction is comprised of two parts: an <strong>opcode</strong> (the operation to be performed) and <strong>operands</strong> (the data)[span_64](end_span). [span_65](start_span)The execution of an instruction involves multiple cycles: Fetch, Decode, Execute, and Write back[span_65](end_span).</p>
+
+            <div class="check-progress">
+                <h4>Check Your Progress 2</h4>
+                <p><strong>3) Briefly state the reason why ASCII can not be less than 7 bit code?</strong><br/>
+                [span_66](start_span)[span_67](start_span)ASCII code needs to represent 10 decimal digits, 26 uppercase letters, 26 lowercase letters, and other punctuation and special characters[span_66](end_span)[span_67](end_span). [span_68](start_span)A 6-bit code can represent only 64 characters ($2^6$), which is insufficient[span_68](end_span). [span_69](start_span)A 7-bit code, which can represent 128 characters ($2^7$), is required to accommodate all these symbols[span_69](end_span).</p>
+            </div>
         </div>
 
         <div id="unit1-3" class="unit">
             <h3>Unit 3: Memory System</h3>
             <h4>3.2 MEMORY AND STORAGE DEVICES</h4>
-            [span_80](start_span)<p>Memory is an important component of a computer where all the data and information are stored in the form of binary digits.[span_80](end_span) [span_81](start_span)The storage devices are ranked based on access time, storage capacity, and cost-per-bit.[span_81](end_span)</p>
-            <p>Memory is broadly categorized into two types:</p>
+            [span_70](start_span)<p>Memory is an essential computer component where data and information are stored as binary digits[span_70](end_span). [span_71](start_span)Storage devices are categorized by access time, storage capacity, and cost per bit[span_71](end_span).</p>
             <ul>
-                <li><b>Primary or Main Memory:</b> Also called semiconductor memory (e.g., RAM, ROM). [span_82](start_span)[span_83](start_span)It has faster access time, smaller storage capacity, and higher cost per bit.[span_82](end_span)[span_83](end_span) [span_84](start_span)It is a volatile memory.[span_84](end_span)</li>
-                <li><b>Secondary or Auxiliary Memory:</b> Used for bulk storage (e.g., magnetic disks, optical disks). [span_85](start_span)[span_86](start_span)It is slower, has higher capacity, and lower cost per bit.[span_85](end_span)[span_86](end_span) [span_87](start_span)It is non-volatile.[span_87](end_span)</li>
+                [span_72](start_span)<li><strong>Primary Memory (Main Memory):</strong> Has faster access time, smaller storage capacity, and higher cost per bit[span_72](end_span). [span_73](start_span)[span_74](start_span)It is directly accessed by the CPU and is typically volatile[span_73](end_span)[span_74](end_span). Examples include RAM and ROM.</li>
+                [span_75](start_span)<li><strong>Secondary Memory (Auxiliary Memory):</strong> Slower, with higher capacity and lower cost per bit[span_75](end_span). [span_76](start_span)It is used for bulk, non-volatile storage[span_76](end_span). [span_77](start_span)Examples include hard disks, floppy disks, and CD-ROMs[span_77](end_span).</li>
             </ul>
+            
             <h5>3.2.1 Semiconductor (Main) Memory</h5>
             <ul>
-                [span_88](start_span)<li><b>RAM (Random Access Memory):</b> The read and write memory of a computer.[span_88](end_span) [span_89](start_span)It is volatile, meaning its contents are lost when the power is off.[span_89](end_span) [span_90](start_span)Types include Static RAM (SRAM) and Dynamic RAM (DRAM).[span_90](end_span)</li>
-                [span_91](start_span)[span_92](start_span)<li><b>ROM (Read Only Memory):</b> A non-volatile memory where information is stored permanently and can only be read, not written to.[span_91](end_span)[span_92](end_span) [span_93](start_span)It stores startup instructions.[span_93](end_span) [span_94](start_span)Variations include PROM (Programmable ROM) and EPROM (Erasable Programmable ROM).[span_94](end_span)</li>
+                [span_78](start_span)[span_79](start_span)<li><strong>RAM (Random Access Memory):</strong> A volatile, read-write memory where programs and data are stored during execution[span_78](end_span)[span_79](end_span). [span_80](start_span)[span_81](start_span)Types include Static RAM (SRAM), used for cache, and Dynamic RAM (DRAM), used for main memory[span_80](end_span)[span_81](end_span).</li>
+                [span_82](start_span)<li><strong>ROM (Read Only Memory):</strong> A non-volatile memory where information is stored permanently by the manufacturer and can only be read[span_82](end_span). [span_83](start_span)It holds startup instructions[span_83](end_span). [span_84](start_span)Variations include PROM, EPROM, and EEPROM[span_84](end_span).</li>
             </ul>
+            
             <h5>3.2.2 Magnetic Memory</h5>
-            [span_95](start_span)<p>Used for permanent, non-volatile storage.[span_95](end_span)</p>
+            [span_85](start_span)<p>Magnetic memory is an inexpensive, non-volatile medium for permanent storage[span_85](end_span).</p>
             <ul>
-                [span_96](start_span)<li><b>Hard Disk Drives (HDD):</b> On-line storage devices that contain magnetic disks (platters) to store programs, data, and the operating system.[span_96](end_span) [span_97](start_span)Data is organized into tracks and sectors.[span_97](end_span)</li>
-                [span_98](start_span)[span_99](start_span)<li><b>Pen Drive:</b> A portable USB flash memory device used for transferring data between systems.[span_98](end_span)[span_99](end_span)</li>
-                [span_100](start_span)<li><b>Magnetic Tapes:</b> A sequential access secondary storage device used for backups.[span_100](end_span)</li>
+                [span_86](start_span)<li><strong>Magnetic Disks (Hard Disks):</strong> The most common form of secondary storage, providing fast access and high capacity[span_86](end_span). [span_87](start_span)Data is stored on concentric circles called tracks, which are divided into sectors[span_87](end_span). [span_88](start_span)A set of corresponding tracks on multiple platters is called a cylinder[span_88](end_span).</li>
+                [span_89](start_span)[span_90](start_span)<li><strong>Pen Drive (Flash Drive):</strong> A portable USB flash memory device that is smaller, faster, and more durable than floppy disks or CDs[span_89](end_span)[span_90](end_span).</li>
             </ul>
+
             <h5>3.2.3 Optical Memories</h5>
-            [span_101](start_span)<p>Optical disks are mass storage devices that use a laser beam to read and write data.[span_101](end_span)</p>
+            [span_91](start_span)<p>Optical disks use a laser beam to read and write data[span_91](end_span).</p>
             <ul>
-                [span_102](start_span)<li><b>CD-ROM (Compact-Disk Read Only Memory):</b> Can store over 600 MB of data.[span_102](end_span) [span_103](start_span)It's a read-only medium.[span_103](end_span)</li>
-                [span_104](start_span)<li><b>CD-R (CD-Recordable):</b> Allows users to write data once.[span_104](end_span)</li>
-                [span_105](start_span)<li><b>CD-RW (CD-Rewritable):</b> Allows data to be recorded and erased multiple times.[span_105](end_span)</li>
-                [span_106](start_span)<li><b>DVD (Digital Versatile Disk):</b> Stores much more data than a CD, with capacities from 4.7GB to over 20GB.[span_106](end_span)</li>
+                [span_92](start_span)<li><strong>CD-ROM (Compact-Disk Read Only Memory):</strong> Can store over 600 MB of data and is a read-only medium[span_92](end_span).</li>
+                [span_93](start_span)<li><strong>CD-R (CD-Recordable):</strong> Allows users to write data once[span_93](end_span).</li>
+                [span_94](start_span)<li><strong>CD-RW (CD-Rewritable):</strong> An erasable optical disk that allows data to be recorded and erased multiple times[span_94](end_span).</li>
+                [span_95](start_span)<li><strong>DVD (Digital Versatile Disk):</strong> Stores significantly more data than a CD, with capacities starting at 4.7 GB[span_95](end_span).</li>
             </ul>
 
             <h4>3.3 MEMORY HIERARCHY AND THEIR NEEDS</h4>
-            [span_107](start_span)<p>To provide a memory system that is both fast and large, modern computers use a memory hierarchy.[span_107](end_span) [span_108](start_span)[span_109](start_span)At the top are fast, small, and expensive CPU registers, followed by cache memory, main memory, and finally large, slow, and cheap secondary storage like magnetic disks and tapes.[span_108](end_span)[span_109](end_span) [span_110](start_span)The goal is to ac
+            [span_96](start_span)<p>To balance speed, size, and cost, modern computers use a memory hierarchy[span_96](end_span). [span_97](start_span)This hierarchy includes fast but small CPU registers at the top, followed by cache memory, main memory, and finally large but slow secondary storage[span_97](end_span). [span_98](start_span)The overall goal is to achieve the highest possible access speed while minimizing the total cost of the memory system[span_98](end_span).</p>
+
+            <div class="check-progress">
+                <h4>Check Your Progress 3</h4>
+                <p><strong>4. What is the overall purpose of the memory hierarchy? Name the general class
